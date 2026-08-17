@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090508" />
+  <title>For Kashi — From Jay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <main id="app">
+    <section class="scene intro active" data-scene="0" aria-labelledby="intro-title">
+      <div class="glow"></div><div class="orbit o1"></div><div class="orbit o2"></div>
+      <p class="eyebrow">A birthday letter, made with love</p>
+      <h1 id="intro-title">Happy Birthday,<br><em>Kashi.</em></h1>
+      <p class="intro-copy">A small walk through the moments that stayed with me.</p>
+      <button class="primary" data-next>Begin <span>→</span></button>
+      <p class="hint">Tap to begin · best with sound on</p>
+    </section>
+
+    <section class="scene story" data-scene="1" aria-labelledby="story-title">
+      <div class="section-wrap">
+        <p class="eyebrow">Chapter one</p><h2 id="story-title">The story I still carry.</h2>
+        <div class="timeline">
+          <article><span>01</span><div><h3>For Kashish</h3><p>Wishing you a very happy birthday, Kashish. ❤️</p><p>You truly mean a lot to me, more than I could ever put into words.</p></div></article>
+          <article><span>02</span><div><h3>The first time — Magnum</h3><p>I still remember the first time I met you at Magnum. From the very first moment I saw you, there was something about you that I couldn’t explain. I just felt drawn towards you. I loved your nature, the way you behaved, the way you carried yourself… everything about you made me feel something I had never felt before. Maybe it really was love at first sight for me.</p></div></article>
+          <article><span>03</span><div><h3>Being around you</h3><p>From sitting together at Magnum to going on breaks together, I simply loved being around you. I don’t know what it was, but whenever I was with you, I felt genuinely happy. And within those days, I slowly realized that what I was feeling wasn’t just a simple attraction—I had actually fallen in love with you.</p></div></article>
+          <article><span>04</span><div><h3>Trust</h3><p>That’s why I gathered the courage to tell you how I felt. I know you probably didn’t trust me completely at that time because of the things you had been through in your past. Those experiences had given you reasons to have trust issues, and I completely understood that. But after all my efforts, when you finally started trusting me, even a little, I felt incredibly lucky.</p><p>I had promised you that I would never leave you, no matter what happened. And honestly, I never did.</p></div></article>
+          <article><span>05</span><div><h3>The little moments</h3><p>I still remember all those little moments we shared—the rides together on the bike, waiting for one or two hours just to get a glimpse of you, your smile, our first kiss, the way you would sometimes hold my hand, our silly little arguments, our endless debates and all those small moments that somehow became the most beautiful memories of my life.</p><p>Because of you, I even started waking up early in the morning. There are so many little things about me that changed because of you, and maybe you never even realized how much of an impact you had on my life.</p></div></article>
+          <article><span>06</span><div><h3>Grateful</h3><p>Even today, I have so many feelings inside me, but I can’t express them the way I used to. Maybe some things have changed, maybe life has taken us somewhere neither of us expected. But no matter what, I will always be grateful for everything you gave me—the memories, the happiness, the love, and the moments that I will carry with me for the rest of my life.</p><p>You have done something for me that I can never repay. You became a beautiful part of my life, and I feel truly blessed that, even for a little while, I got to experience that kind of happiness with you.</p></div></article>
+          <article><span>07</span><div><h3>Today, on your birthday</h3><p>I never knew those beautiful moments would be temporary. If I had known, I would have held on to every second a little tighter.</p><p>But today is your birthday, and more than anything, I just want you to be happy. I hope life gives you everything your heart wishes for. I hope you always keep that beautiful smile, and I hope you find all the love, peace and happiness you deserve.</p><p>Happy Birthday, Kashish. ❤️</p><p>No matter where life takes us, a part of my heart will always be grateful that I met you.</p></div></article>
+        </div>
+        <button class="primary" data-next>See the memories <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="scene gallery" data-scene="2" aria-labelledby="gallery-title">
+      <div id="photo-stage" class="photo-stage" role="group" aria-roledescription="carousel" aria-label="Memory photos">
+        <div class="photo-shade"></div>
+        <div class="photo-placeholder"><span>Photos will appear here</span><small>Add files to <code>assets/photos</code> and list them in <code>script.js</code>.</small></div>
+      </div>
+      <div class="gallery-ui"><p class="eyebrow">Chapter two · <span id="slide-number">00 / 00</span></p><h2 id="gallery-title">Little frames of<br><em>big feelings.</em></h2><p id="slide-caption">Swipe left or right to move through the memories.</p></div>
+      <div class="gallery-controls"><button class="round" id="prev-photo" aria-label="Previous photo">←</button><div id="dots" aria-hidden="true"></div><button class="round" id="next-photo" aria-label="Next photo">→</button></div>
+    </section>
+
+    <section class="scene quiz" data-scene="3" aria-labelledby="quiz-title">
+      <div class="section-wrap narrow"><p class="eyebrow">Chapter three</p><h2 id="quiz-title">A few questions<br>from the heart.</h2><p class="quiz-note">Choose what feels true to you. This is a private, local-only birthday page: your selections stay in this browser and are never sent anywhere.</p>
+      <form id="quiz-form" novalidate></form><p id="quiz-status" role="status">The cake surprise opens automatically after all six questions have an answer.</p></div>
+    </section>
+
+    <section class="scene reveal" data-scene="4" aria-labelledby="cake-title">
+      <div class="cake-wrap" aria-hidden="true"><div class="flame f1"></div><div class="flame f2"></div><div class="flame f3"></div><div class="cake-top"><span>Kashi</span></div><div class="cake-mid"></div><div class="cake-bottom"></div><div class="cake-plate"></div></div>
+      <p class="eyebrow">The surprise is here</p><h2 id="cake-title">Make a wish,<br><em>birthday girl.</em></h2><p class="reveal-copy">May your year be soft, bright, and full of everything your heart wishes for.</p><button class="primary" id="open-letter">Open your letter <span>♡</span></button>
+    </section>
+
+    <section class="scene letter" data-scene="5" aria-labelledby="letter-title">
+      <div class="section-wrap narrow letter-paper"><p class="eyebrow">For you, always</p><h2 id="letter-title">Happy birthday,<br><em>Kashish.</em></h2>
+      <div class="letter-copy"><p>First of all, I’m sorry for liking you for this long. I never planned to feel this way, but whenever I try to move on, my feelings become even stronger.</p><p>I know you may like someone else, and I understand that it will probably never be me. I don’t expect anything from you; I just want to admire you from far away and always wish good things for you.</p><p>Thank you for existing and making my normal days feel special. And if one day you feel nobody is proud of you, remember there is someone who will always be proud of you and support you.</p><p>It’s okay if you don’t feel the same. I’ll support you until these feelings slowly fade. Because of you, I understood how it feels to really fall in love, and I’ll always be thankful for that.</p><p>Wishing you a very happy birthday. I pray that whoever you are with, you always stay happy. At last, just be happy forever — I hope you become successful in your life and achieve everything you ever wish for. That is my only prayer for you.</p></div><p class="signature">— Jay</p></div>
+    </section>
+  </main>
+  <button id="local-log" class="log-button" aria-label="Open local answer log">Local answer log</button>
+  <dialog id="log-dialog"><div class="dialog-head"><div><p class="eyebrow">This device only</p><h2>Answer journal</h2></div><button class="close" id="close-log" aria-label="Close">×</button></div><p class="dialog-note">Selections and timestamps are saved only in this browser’s local storage. Anyone using this device can see this log; it does not send or share data.</p><div id="log-content"></div><button id="clear-log" class="text-button">Clear this browser’s log</button></dialog>
+  <audio id="birthday-audio" preload="auto"><source src="assets/audio/happy-birthday..mp3" type="audio/mpeg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
